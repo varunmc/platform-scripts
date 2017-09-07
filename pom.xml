@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>mc.varun</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>platform-scripts</artifactId>
+	<packaging>jar</packaging>
+	<name>Platform Scripts</name>
+
+	<repositories>
+		<repository>
+			<id>maven-s3</id>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<url>http://maven.varun.mc.s3-website-us-east-1.amazonaws.com</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/main/scripts</directory>
+			</resource>
+		</resources>
+	</build>
+</project>
